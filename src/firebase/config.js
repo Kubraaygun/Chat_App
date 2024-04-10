@@ -14,13 +14,12 @@ const firebaseConfig = {
   projectId: "chat-app-59441",
   storageBucket: "chat-app-59441.appspot.com",
   messagingSenderId: "781497372365",
-  appId: "1:781497372365:web:5bc57886cab216b88b2384"
+  appId: "1:781497372365:web:5bc57886cab216b88b2384",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 //kimlik dogrulama bolumunun referansi alindi
-
-export const auth=getAuth(app);
+export const auth = getAuth(app);
 //Google saglayicisinin kurulumu
-export const provider= new GoogleAuthProvider()
+export const provider = new GoogleAuthProvider();
