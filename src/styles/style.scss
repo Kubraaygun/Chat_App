@@ -54,30 +54,28 @@ body {
 }
 
 //Stil Sifirlamalari
-h1{
+h1 {
   font-size: 50px;
-
 }
 
-button{
+button {
   background: #1a1a1a;
   color: white;
   padding: 8px 20px;
   border-radius: 8px;
-  cursor:pointer;
+  cursor: pointer;
   border: none;
-  outline:none;
+  outline: none;
   font-size: 16px;
   text-align: center;
   font-weight: 500;
-  &:hover{
+  &:hover {
     filter: brightness(60%);
   }
 }
 
-
 //Oda Secme Sayfasi
-.room-page{
+.room-page {
   background: white;
   color: #1a1a1a;
   padding: 50px 60px;
@@ -87,16 +85,66 @@ button{
   gap: 40px;
   text-align: center;
 
-  input{
+  input {
     padding: 5px 10px;
     font-size: 20px;
     border: none;
     outline: none;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.344) ;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.344);
     border-radius: 8px;
   }
 
-  &>button:last-child{
+  & > button:last-child {
     background: crimson;
+  }
+}
+
+//sohbet sayfasi
+.chat-page {
+  background-color: white;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  @media (max-width: 650px) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+.chat-page header {
+  background-color: #4d4c7d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  button {
+    background-color: #f99417;
+  }
+}
+
+.chat-page form {
+  display: flex;
+  justify-content: center;
+  background-color: #4d4c7d;
+  padding: 10px;
+  gap: 20px;
+
+  input {
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.57);
+  }
+  button {
+    background: #f99417;
   }
 }
