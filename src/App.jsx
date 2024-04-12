@@ -1,8 +1,16 @@
-import './styles/style.scss'
-import AuthPage from './pages/AuthPage'
+import "./styles/style.scss";
+import AuthPage from "./pages/AuthPage";
+import { useState } from "react";
+import RoomPage from "./pages/RoomPage"
 
 const App = () => {
-return(<AuthPage/>)
-}
+  const [isAuth, setIsAuth] = useState();
 
-export default App
+  if (!isAuth) {
+    return <AuthPage setIsAuth={setIsAuth} />;
+  }
+
+  return <RoomPage />;
+};
+
+export default App;

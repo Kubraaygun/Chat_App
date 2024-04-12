@@ -1,17 +1,22 @@
 import { auth, provider } from "../firebase/config";
 import { signInWithPopup } from "firebase/auth";
-import { useState } from "react";
 
-const AuthPage = () => {
+
+const AuthPage = ({setIsAuth}) => {
   const handleClick = () => {
-    signInWithPopup(auth, provider).then((data) => {});
+    signInWithPopup(auth, provider).then((data) => {
+      setIsAuth(true)
+    });
   };
   return (
-    <div>
-      <div>
+    <div className="container">
+      <div className="auth">
         <h1>Chat Odası</h1>
         <p>Devam etmek için giriş yapın</p>
-        <button onClick={handleClick}>Google İle Gir </button>
+        <button onClick={handleClick}>
+          <img src="/g-logo.png"  />
+          <span>Google İle Gir</span>
+        </button>
       </div>
     </div>
   );
