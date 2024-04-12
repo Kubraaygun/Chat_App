@@ -1,9 +1,14 @@
+const ChatPage = ({ room , setRoom}) => {
+  return (  
+  <div className="chat-page">
+    <header>
+        <p>Deneme</p>
+        <p>{room}</p>
+        <button></button>
+    </header>
+    <main></main>
+    <form ></form>
+  </div>)
+};
 
-
-const ChatPage = () => {
-  return (
-    <div>ChatPage</div>
-  )
-}
-
-export default ChatPage
+export default ChatPage;
