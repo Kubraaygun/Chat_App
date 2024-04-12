@@ -4,13 +4,13 @@ import { useState } from "react";
 import RoomPage from "./pages/RoomPage"
 
 const App = () => {
-  const [isAuth, setIsAuth] = useState();
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("TOKEN"));
 
   if (!isAuth) {
     return <AuthPage setIsAuth={setIsAuth} />;
   }
 
-  return <RoomPage />;
+  return <div className="container"><RoomPage /></div>;
 };
 
 export default App;
