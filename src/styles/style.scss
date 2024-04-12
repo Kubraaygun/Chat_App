@@ -52,3 +52,51 @@ body {
     width: 30px;
   }
 }
+
+//Stil Sifirlamalari
+h1{
+  font-size: 50px;
+
+}
+
+button{
+  background: #1a1a1a;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor:pointer;
+  border: none;
+  outline:none;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  &:hover{
+    filter: brightness(60%);
+  }
+}
+
+
+//Oda Secme Sayfasi
+.room-page{
+  background: white;
+  color: #1a1a1a;
+  padding: 50px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+
+  input{
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.344) ;
+    border-radius: 8px;
+  }
+
+  &>button:last-child{
+    background: crimson;
+  }
+}

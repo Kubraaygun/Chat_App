@@ -5,7 +5,9 @@ import { signInWithPopup } from "firebase/auth";
 const AuthPage = ({setIsAuth}) => {
   const handleClick = () => {
     signInWithPopup(auth, provider).then((data) => {
-      setIsAuth(true)
+      setIsAuth(true);
+
+      localStorage.setItem("TOKEN", data.user.refreshToken)
     });
   };
   return (
