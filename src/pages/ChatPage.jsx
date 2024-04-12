@@ -4,10 +4,13 @@ const ChatPage = ({ room , setRoom}) => {
     <header>
         <p>Deneme</p>
         <p>{room}</p>
-        <button></button>
+        <button>Farkli Oda</button>
     </header>
-    <main></main>
-    <form ></form>
+    <main>Mesajlar</main>
+    <form >
+        <input required placeholder="mesajizini yaziniz" type="text" />
+        <button>Gonder</button>
+    </form>
   </div>)
 };
 
