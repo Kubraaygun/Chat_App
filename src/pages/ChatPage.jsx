@@ -1,7 +1,8 @@
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "./../firebase/config";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { auth, db } from "./../firebase/config";
 
 const ChatPage = ({ room, setRoom }) => {
+  console.log(auth);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -12,17 +13,17 @@ const ChatPage = ({ room, setRoom }) => {
       text: e.target[0].value,
       room,
       author: {
-        name: "",
-        id: "",
-        photo: "",
+        name: auth.currentUser?.displayName,
+        id: auth.currentUser?.uid,
+        photo: auth.currentUser.photoURL,
       },
-      createdAt: "",
+      createdAt: serverTimestamp(),
     });
   };
   return (
     <div className="chat-page">
       <header>
-        <p>Deneme</p>
+        <p>{auth.currentUser?.displayName}</p>
         <p>{room}</p>
         <button>Farklı Oda</button>
       </header>
