@@ -1,5 +1,6 @@
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, onSnapshot } from "firebase/firestore";
 import { auth, db } from "./../firebase/config";
+import { useEffect } from "react";
 
 const ChatPage = ({ room, setRoom }) => {
   console.log(auth);
@@ -20,6 +21,22 @@ const ChatPage = ({ room, setRoom }) => {
       createdAt: serverTimestamp(),
     });
   };
+
+//bu odada gonderilen mesajlari anlik olarak getir
+
+useEffect(()=>{
+  const messagesCol = collection(db, "messages");
+  //anlik olarak bir koleksiyondaki degisimleri izler
+  //kolleksiyon her destiginde verdigimiz fonksiyone kolleksiyondaki dokumanlari parametre olarak gonderir
+  onSnapshot(messagesCol,(snapshot)=>{
+console.log("SNAPSHOT",snapshot)
+  })
+},[])
+
+
+
+
+
   return (
     <div className="chat-page">
       <header>
