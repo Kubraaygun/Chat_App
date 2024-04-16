@@ -1,9 +1,14 @@
-import { collection, addDoc, serverTimestamp, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  serverTimestamp,
+  onSnapshot,
+} from "firebase/firestore";
 import { auth, db } from "./../firebase/config";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const ChatPage = ({ room, setRoom }) => {
-  console.log(auth);
+  const [messages, setmessages]=useState([])
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -22,20 +27,24 @@ const ChatPage = ({ room, setRoom }) => {
     });
   };
 
-//bu odada gonderilen mesajlari anlik olarak getir
+  //bu odada gonderilen mesajlari anlik olarak getir
 
-useEffect(()=>{
-  const messagesCol = collection(db, "messages");
-  //anlik olarak bir koleksiyondaki degisimleri izler
-  //kolleksiyon her destiginde verdigimiz fonksiyone kolleksiyondaki dokumanlari parametre olarak gonderir
-  onSnapshot(messagesCol,(snapshot)=>{
-console.log("SNAPSHOT",snapshot)
-  })
-},[])
+  useEffect(() => {
+    const messagesCol = collection(db, "messages");
+    //anlik olarak bir koleksiyondaki degisimleri izler
+    //kolleksiyon her destiginde verdigimiz fonksiyone kolleksiyondaki dokumanlari parametre olarak gonderir
+    onSnapshot(messagesCol, (snapshot) => {
+      //verilerin gecici olarak tutuldugu dizi
+      const tempMsg = [];
 
-
-
-
+      //dokumanlari don verilerine eris ve diziye aktar
+      snapshot.docs.forEach((doc) => {
+        tempMsg.push(doc.data());
+      });
+      //mesajlari state aktar
+      setmessages(tempMsg);
+    });
+  }, []);
 
   return (
     <div className="chat-page">
