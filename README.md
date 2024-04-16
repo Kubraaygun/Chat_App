@@ -20,7 +20,7 @@ Bu proje Firebase kullanıcıların sohbet odalarına katılabileceği bir çevr
 
 <h2>Firebase Temel Özellikleri </h2>
 <ul>
-<li><b>Gerçek Zamanlı Veritabanı:</b>  Firebase, gerçek zamanlı veri senkronizasyonunu sağlayan NoSQL tabanlı bir bulut veritabanı sunar. Bu, uygulamalar arasında anlık olarak veri güncellemelerini sağlar.</li>
+<li><b>Gerçek Zamanlı Veritabanı:</b> <br> Firebase, gerçek zamanlı veri senkronizasyonunu sağlayan NoSQL tabanlı bir bulut veritabanı sunar. Bu, uygulamalar arasında anlık olarak veri güncellemelerini sağlar.</li>
 <li><b>Kimlik Doğrulama:</b>  Firebase, kullanıcıların kimlik doğrulamasını kolaylaştırır. Google, Facebook, Twitter gibi popüler kimlik sağlayıcılarına entegrasyon sağlar ve e-posta ve şifreyle doğrulama seçenekleri sunar.</li>
 <li><b>Uygulama Barındırma:</b>  Firebase, web uygulamalarınızı Firebase'e entegre ederek kolayca barındırmanıza olanak tanır. SSL desteği, otomatik ölçeklendirme ve hızlı CDN hizmeti gibi özellikler sunar.</li>
 <li><b>Dosya Depolama:</b>  Firebase Storage, kullanıcıların medya dosyalarını güvenli ve ölçeklenebilir bir şekilde depolamalarını sağlar. Bu, kullanıcıların resimler, videolar ve diğer dosyaları kolayca yüklemesine ve paylaşmasına olanak tanır.</li>
