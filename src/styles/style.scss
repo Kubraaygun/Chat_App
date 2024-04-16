@@ -7,8 +7,11 @@
 body {
   min-height: 100vh;
   font-family: "Poppins";
-  background: #242424;
+  background: #dca0a0;
   color: rgb(255, 255, 255);
+}
+h1{
+  color: #dc4444;
 }
 
 .container {
@@ -59,7 +62,7 @@ h1 {
 }
 
 button {
-  background: #1a1a1a;
+  background: #39b320;
   color: white;
   padding: 8px 20px;
   border-radius: 8px;
@@ -90,7 +93,7 @@ button {
     font-size: 20px;
     border: none;
     outline: none;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.344);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.340);
     border-radius: 8px;
   }
 
