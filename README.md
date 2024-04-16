@@ -39,4 +39,4 @@ Firebase, geniş bir yelpazede sunulan bu özelliklerle geliştiricilere uygulam
 
 <h2>Ekran Görüntüsü</h2>
 
-![]()
+![](./public/chatapp.gif)
