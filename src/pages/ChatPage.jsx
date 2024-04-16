@@ -6,9 +6,10 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "./../firebase/config";
 import { useEffect, useState } from "react";
+import Message from "../components/Message";
 
 const ChatPage = ({ room, setRoom }) => {
-  const [messages, setmessages]=useState([])
+  const [messages, setmessages] = useState([]);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -53,7 +54,12 @@ const ChatPage = ({ room, setRoom }) => {
         <p>{room}</p>
         <button>Farklı Oda</button>
       </header>
-      <main>Mesajlar</main>
+      
+      <main>
+        {messages.map((data, i) => (
+          <Message key={i} data={data} />
+        ))}
+      </main>
       <form onSubmit={handleSubmit}>
         <input required placeholder="Mesajızını Yazınız" type="text" />
         <button>Gönder</button>
