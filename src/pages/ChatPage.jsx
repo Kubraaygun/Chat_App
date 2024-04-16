@@ -3,6 +3,9 @@ import {
   addDoc,
   serverTimestamp,
   onSnapshot,
+  query,
+  orderBy,
+  where,
 } from "firebase/firestore";
 import { auth, db } from "./../firebase/config";
 import { useEffect, useState } from "react";
@@ -15,6 +18,7 @@ const ChatPage = ({ room, setRoom }) => {
 
     //collection referansini alma
     const messagesCol = collection(db, "messages");
+
     //kolleksiyona yeni dokuman ekle
     await addDoc(messagesCol, {
       text: e.target[0].value,
@@ -32,9 +36,17 @@ const ChatPage = ({ room, setRoom }) => {
 
   useEffect(() => {
     const messagesCol = collection(db, "messages");
+
+    //Filtreleme ayarlari
+    const q = query(
+      messagesCol,
+      where("room", "==", room),
+      orderBy("createdAt", "asc")
+    );
+
     //anlik olarak bir koleksiyondaki degisimleri izler
     //kolleksiyon her destiginde verdigimiz fonksiyone kolleksiyondaki dokumanlari parametre olarak gonderir
-    onSnapshot(messagesCol, (snapshot) => {
+    onSnapshot(q, (snapshot) => {
       //verilerin gecici olarak tutuldugu dizi
       const tempMsg = [];
 
@@ -52,9 +64,9 @@ const ChatPage = ({ room, setRoom }) => {
       <header>
         <p>{auth.currentUser?.displayName}</p>
         <p>{room}</p>
-        <button>Farklı Oda</button>
+        <button onClick={()=>setRoom(null)}>Farklı Oda</button>
       </header>
-      
+
       <main>
         {messages.map((data, i) => (
           <Message key={i} data={data} />
