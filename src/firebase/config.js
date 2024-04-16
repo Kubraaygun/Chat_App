@@ -8,7 +8,6 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -26,6 +25,5 @@ export const auth = getAuth(app);
 //Google saglayicisinin kurulumu
 export const provider = new GoogleAuthProvider();
 
-
 //Veritabani referansi al
-export const db=getFirestore(app)
+export const db = getFirestore(app);
