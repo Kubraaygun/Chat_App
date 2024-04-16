@@ -30,6 +30,8 @@ const ChatPage = ({ room, setRoom }) => {
       },
       createdAt: serverTimestamp(),
     });
+    //Formu sifirla
+    e.target.reset()
   };
 
   //bu odada gonderilen mesajlari anlik olarak getir
