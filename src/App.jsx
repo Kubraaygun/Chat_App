@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="container">
-      {room ? (<ChatPage room={room} setRoom={setRoom}/>) :(<RoomPage setRoom={setRoom} />)}
+      {room ? (<ChatPage room={room} setRoom={setRoom}/>) :(<RoomPage setRoom={setRoom} setIsAuth={setIsAuth} />)}
     </div>
   );
 };
