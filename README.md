@@ -5,7 +5,7 @@ Bu proje Firebase kullanıcıların sohbet odalarına katılabileceği bir çevr
 <ul>
 <li><b>Kimlik Doğrulama:</b>  Kullanıcılar, Google hesaplarıyla kimlik doğrulaması yaparak uygulamaya giriş yapabilirler.</li>
 <li><b>Oda Seçimi:</b>  Kullanıcılar, bir sohbet odasına katılmak için oda adını girebilirler.</li>
-<li><b>Sohbet: </b>  Kullanıcılar, seçtikleri odada diğer kullanıcılarla gerçek zamanlı olarak sohbet edebilirler.</li>
+<li><b>Sohbet: </b>  Kullanıcılar, seçtikleri odada diğer kullanıcılarla gerçek zamanlı olarak sohbet erler.</li>
 <li><b>Güvenlik:</b>  Kullanıcıların kimlik doğrulaması ve oda seçimi yapmaları gerektiği için güvenli bir sohbet ortamı sağlanmaktadır.</li>
 
 </ul>
