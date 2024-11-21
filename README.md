@@ -1,9 +1,9 @@
 
 # Chat Application
 
-Bu proje Firebase kullanıcıların sohbet odalarına katılabileceği bir çevrimiçi sohbet uygulamasıdır. Kullanıcılar Google hesaplarıyla kimlik doğrulaması yapabilir ve seçtikleri bir odaya katılarak diğer kullanıcılarla sohbet edebilirler.
+This project Firebase is an online chat application where users can join chat rooms. Users can authenticate with their Google accounts and join a room of their choice to chat with other users.
 
-<h2>Proje Özellikler </h2>
+Project Features
 <ul>
 <li><b>Kimlik Doğrulama:</b>  Kullanıcılar, Google hesaplarıyla kimlik doğrulaması yaparak uygulamaya giriş yapabilirler.</li>
 <li><b>Oda Seçimi:</b>  Kullanıcılar, bir sohbet odasına katılmak için oda adını girebilirler.</li>
